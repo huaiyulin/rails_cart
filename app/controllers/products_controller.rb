@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
 	def edit
 	end
-
+ 
 	# create 的寫法和 new 的寫法要分清楚
 	def create
 		@product = Product.new(product_params)
@@ -40,7 +40,7 @@ class ProductsController < ApplicationController
 	def destroy
 		@product.destroy
 		# not: redirect_to :index
-		# not: redirect_to products_path
+		# both fine: redirect_to products_path or products_url
 		redirect_to products_url, notice: 'Product was successfully destroyed.'
 	end
 
