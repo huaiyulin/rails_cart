@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+<h1><%= @product.title %></h1>
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Img url:</strong>
+  <%= @product.img_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @product.category %>
+</p>
+
+<p>
+  <strong>Subcategory:</strong>
+  <%= @product.subcategory %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Delete', @product, method: :delete, data: {confirm: 'Are you sure?'} %> |
+<%= link_to 'Back', products_path %>
