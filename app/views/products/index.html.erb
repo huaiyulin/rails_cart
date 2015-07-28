@@ -29,6 +29,7 @@
 				<td><%= link_to 'Edit', edit_product_path(product) %></td>
 				<%# not: method: :destroy --> method: :delete %>
 				<td><%= link_to 'Delete', product, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+				<td><a href="/carts/<%= product.id %>"> Add To Cart </a></td>
 			</tr>
 		<% end %>
 	</tbody>
